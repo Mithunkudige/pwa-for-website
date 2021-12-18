@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4dbaa8" />
+    <title>Document</title>
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js").then(registration => {
+                console.log('registration');
+                console.log(registration);
+            }).catch(error => {
+                console.log('Registration failed');
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>Hello World</div>   
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyC_Bm0-LK3-UpwFZ-mv1nlN2iRawASnbF8",
+          authDomain: "pwaa-f7c7f.firebaseapp.com",
+          projectId: "pwaa-f7c7f",
+          storageBucket: "pwaa-f7c7f.appspot.com",
+          messagingSenderId: "897500357950",
+          appId: "1:897500357950:web:38ec5a2a7940f064d8386f"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>
